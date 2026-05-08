@@ -86,7 +86,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 .base-tbl tr:last-child td{border-bottom:none;}
 .base-tbl tr:nth-child(even) td{background:#fafafa;}
 .inst-wrap{overflow:auto;max-height:62vh;-webkit-overflow-scrolling:touch;border-radius:0 0 8px 8px;}
-.inst-tbl{width:100%;border-collapse:collapse;min-width:600px;table-layout:fixed;font-size:9px;background:#fff;}
+.inst-tbl{width:100%;border-collapse:collapse;table-layout:fixed;font-size:9px;background:#fff;}
 .inst-tbl th{background:var(--dark);color:#fff;padding:4px 3px;font-size:7.5px;text-transform:uppercase;letter-spacing:0;white-space:normal;word-break:break-word;vertical-align:middle;text-align:center;}
 .inst-tbl th:nth-child(1),.inst-tbl th:nth-child(2),.inst-tbl th:nth-child(3),.inst-tbl th:nth-child(4){text-align:left;}
 .inst-tbl th select{background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.3);border-radius:4px;font-size:9px;padding:3px 18px 3px 5px;width:100%;-webkit-appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 12 12'%3E%3Cpath fill='white' d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center;font-family:"DM Sans",sans-serif;}
@@ -159,19 +159,20 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 
 
 
-.inst-tbl th:nth-child(1){width:50px;}
-.inst-tbl th:nth-child(2){width:35px;}
-.inst-tbl th:nth-child(3){width:45px;}
-.inst-tbl th:nth-child(4){width:90px;}
-.inst-tbl th:nth-child(5){width:62px;}
-.inst-tbl th:nth-child(6){width:52px;}
-.inst-tbl th:nth-child(7){width:52px;}
-.inst-tbl th:nth-child(8){width:70px;}
-.inst-tbl th:nth-child(9){width:48px;}
-.inst-tbl th:nth-child(10){width:62px;}
-.inst-tbl th:nth-child(11){width:62px;}
-.inst-tbl th:nth-child(12){width:62px;}
-.inst-tbl th:nth-child(13){width:62px;}
+
+.inst-tbl th:nth-child(1){width:6%;}
+.inst-tbl th:nth-child(2){width:4%;}
+.inst-tbl th:nth-child(3){width:6%;}
+.inst-tbl th:nth-child(4){width:11%;}
+.inst-tbl th:nth-child(5){width:7%;}
+.inst-tbl th:nth-child(6){width:7%;}
+.inst-tbl th:nth-child(7){width:7%;}
+.inst-tbl th:nth-child(8){width:9%;}
+.inst-tbl th:nth-child(9){width:6%;}
+.inst-tbl th:nth-child(10){width:8%;}
+.inst-tbl th:nth-child(11){width:8%;}
+.inst-tbl th:nth-child(12){width:8%;}
+.inst-tbl th:nth-child(13){width:8%;}
 
 </style>
 </head>
@@ -320,10 +321,10 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
     <div class="inst-wrap" id="instWrap2">
       <table class="inst-tbl">
         <thead><tr>
-          <th class="sc" style="left:0;width:50px;text-align:left;"><div style="margin-bottom:3px;">Level</div><select id="fLevel"><option value="">All</option></select></th>
-          <th class="sc" style="left:50px;width:40px;text-align:center;">Loc</th>
-          <th class="sc" style="left:90px;width:55px;text-align:left;"><div style="margin-bottom:3px;">Type</div><select id="fType"><option value="">All</option></select></th>
-          <th class="sc" style="left:145px;width:100px;text-align:left;"><div style="margin-bottom:3px;">Pod Code</div><input type="text" id="fPodNo" placeholder="Search..." oninput="renderInstTable()"></th>
+          <th class="sc" style="left:0;text-align:left;"><div style="margin-bottom:3px;">Level</div><select id="fLevel"><option value="">All</option></select></th>
+          <th class="sc" style="left:6%;text-align:center;">Loc</th>
+          <th class="sc" style="left:10%;text-align:left;"><div style="margin-bottom:3px;">Type</div><select id="fType"><option value="">All</option></select></th>
+          <th class="sc" style="left:16%;text-align:left;"><div style="margin-bottom:3px;">Pod Code</div><input type="text" id="fPodNo" placeholder="Search..." oninput="renderInstTable()"></th>
           <th style="min-width:55px;">Temp</th>
           <th style="min-width:70px;">Installed</th>
           <th style="min-width:100px;">Socket Status<br>After Install</th>
@@ -475,10 +476,10 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
       <table class="inst-tbl" style="min-width:700px;">
         <thead>
           <tr>
-            <th class="sc" style="left:0;text-align:left;cursor:pointer;width:50px;min-width:50px;" onclick="openColFilter('level')">Level <span id="fv_level" style="color:var(--yellow);font-size:8px;"></span>&#9660;</th>
-            <th class="sc" style="left:50px;text-align:center;cursor:pointer;width:40px;min-width:40px;" onclick="openColFilter('loc')">Loc <span id="fv_loc" style="color:var(--yellow);font-size:8px;"></span>&#9660;</th>
-            <th class="sc" style="left:90px;text-align:left;cursor:pointer;width:55px;min-width:55px;" onclick="openColFilter('type')">Type <span id="fv_type" style="color:var(--yellow);font-size:8px;"></span>&#9660;</th>
-            <th class="sc" style="left:145px;text-align:left;cursor:pointer;width:100px;min-width:100px;" onclick="openColFilter('pod')">Pod Code <span id="fv_pod" style="color:var(--yellow);font-size:8px;"></span>&#9660;</th>
+            <th class="sc" style="left:0;" onclick="openColFilter('level')">Level <span id="fv_level" style="color:var(--yellow);font-size:8px;"></span>&#9660;</th>
+            <th class="sc" style="left:6%;" onclick="openColFilter('loc')">Loc <span id="fv_loc" style="color:var(--yellow);font-size:8px;"></span>&#9660;</th>
+            <th class="sc" style="left:10%;" onclick="openColFilter('type')">Type <span id="fv_type" style="color:var(--yellow);font-size:8px;"></span>&#9660;</th>
+            <th class="sc" style="left:16%;" onclick="openColFilter('pod')">Pod Code <span id="fv_pod" style="color:var(--yellow);font-size:8px;"></span>&#9660;</th>
             <th style="cursor:pointer;white-space:nowrap;">Offload Date</th>
             <th style="cursor:pointer;" onclick="openColFilter('status')">Temp <span id="fv_status" style="color:var(--yellow);font-size:8px;"></span>&#9660;</th>
             <th style="cursor:pointer;" onclick="openColFilter('installed')">Installed <span id="fv_installed" style="color:var(--yellow);font-size:8px;"></span>&#9660;</th>
@@ -993,15 +994,15 @@ function renderInstTable(){
     var podDisplay=d.stock_pod_no?('<span style="font-weight:700;font-size:11px;">'+d.stock_pod_no+'</span>'):'<span style="color:var(--muted);font-size:10px;font-style:italic;">No pod</span>';
     var podCell;
     if(d.stock_pod_no){
-      podCell='<td class="sc" style="left:145px;width:100px;font-weight:700;font-size:11px;font-family:monospace;">'+d.stock_pod_no+'</td>';
+      podCell='<td class="sc" style="left:16%;font-weight:700;font-size:11px;font-family:monospace;">'+d.stock_pod_no+'</td>';
     } else if(canAssignNew){
-      podCell='<td class="sc" style="left:145px;width:100px;cursor:pointer;color:var(--blue);font-size:11px;text-decoration:underline;" data-k="'+k+'" data-lv="'+p.level+'" data-lo="'+p.location+'" data-pt="'+p.pod_type+'" onclick="assignPodCode(this)">Tap to assign</td>';
+      podCell='<td class="sc" style="left:16%;cursor:pointer;color:var(--blue);font-size:11px;text-decoration:underline;" data-k="'+k+'" data-lv="'+p.level+'" data-lo="'+p.location+'" data-pt="'+p.pod_type+'" onclick="assignPodCode(this)">Tap to assign</td>';
     } else {
-      podCell='<td class="sc" style="left:145px;width:100px;color:var(--muted);font-size:10px;">—</td>';
+      podCell='<td class="sc" style="left:16%;color:var(--muted);font-size:10px;">—</td>';
     }
-    h+='<td class="sc" style="left:0;width:50px;font-size:10px;color:var(--muted);white-space:nowrap;">'+p.level+'</td>';
-    h+='<td class="sc" style="left:50px;width:40px;text-align:center;font-size:10px;color:var(--muted);">'+p.location+'</td>';
-    h+='<td class="sc" style="left:90px;width:55px;"><span class="type-pill">'+p.pod_type+'</span></td>';
+    h+='<td class="sc" style="left:0;font-size:10px;color:var(--muted);white-space:nowrap;">'+p.level+'</td>';
+    h+='<td class="sc" style="left:6%;text-align:center;font-size:10px;color:var(--muted);">'+p.location+'</td>';
+    h+='<td class="sc" style="left:10%;"><span class="type-pill">'+p.pod_type+'</span></td>';
     var hasStockForType=getStockForType(p.pod_type).length>0;
     var existsInDB=!!(d.id||d.installed||d.temp_position||d.stock_pod_no||d.mir_raised||d.wir_raised||d.install_date||d.pod_key||d.level||d.pod_type);
     // Per-field editability rules:
@@ -1917,10 +1918,10 @@ function loadDashboard(){
       var om=obsMap[k]||{total:0,open:0,done:0};
       var rowBg=d.installed?'background:#f0fdf4;':d.temp_position?'background:#fefce8;':'';
       ph+='<tr style="'+rowBg+'cursor:pointer;" data-key="'+k+'" data-podtype="'+p.pod_type+'" data-podno="'+(d.stock_pod_no||'')+'" onclick="handleRowClick(this)">';
-      ph+='<td class="sc" style="left:0;width:50px;font-size:10px;color:var(--muted);">'+p.level+'</td>';
-      ph+='<td class="sc" style="left:50px;width:40px;text-align:center;font-size:10px;color:var(--muted);">'+p.location+'</td>';
-      ph+='<td class="sc" style="left:90px;width:55px;"><span class="type-pill">'+p.pod_type+'</span></td>';
-      ph+='<td class="sc" style="left:145px;width:100px;font-size:10px;font-weight:700;">'+(d.stock_pod_no||'—')+'</td>';
+      ph+='<td class="sc" style="left:0;font-size:10px;color:var(--muted);">'+p.level+'</td>';
+      ph+='<td class="sc" style="left:6%;text-align:center;font-size:10px;color:var(--muted);">'+p.location+'</td>';
+      ph+='<td class="sc" style="left:10%;"><span class="type-pill">'+p.pod_type+'</span></td>';
+      ph+='<td class="sc" style="left:16%;font-size:10px;font-weight:700;">'+(d.stock_pod_no||'—')+'</td>';
       var _offloadDate=d.stock_pod_no?stockDateMap[d.stock_pod_no]||'—':'—';
       _offloadDate=fmtDate(_offloadDate)||'—';
       ph+='<td style="text-align:center;font-size:10px;color:var(--muted);">'+_offloadDate+'</td>';
